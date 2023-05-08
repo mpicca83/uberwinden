@@ -1,0 +1,122 @@
+//main
+//Seccion 1
+
+.seccion1 {
+    display: flex;
+    width: 95vw;
+    flex-wrap: wrap; /*controla que no se desborde*/
+    justify-content:  center; /*centrado*/
+    align-items: center; /* centra verticalmente*/
+    margin: auto;
+
+    &__bloque{
+        min-width: 360px;
+        padding: 5px;
+        align-self: center;
+        overflow: hidden;
+        position: relative;
+
+        img{
+            width: 100%;
+            max-height: 350px;
+            object-fit: contain; /*se ajusta al contenedor*/
+        }
+
+        video{    
+            width: 100%;
+            max-width: 525px;
+            object-fit: cover; /*recorta para que no queden espacios*/    
+        }
+    }
+}
+
+//Sección 2
+
+.seccion2{
+
+    display: flex;
+    gap: 15px;
+    width: 95vw;
+    flex-wrap: wrap; /*controla que no se desborde*/
+    justify-content:  center;
+    align-items: center; /* centra verticalmente*/
+    margin: auto;
+    margin-bottom: 10px;
+
+    &__bloque{
+        align-self: center;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0px 0px 15px 1px black;
+
+        h4{
+            font-family: 'Lato', sans-serif;
+            font-weight:bolder;
+            color:white;
+            position: absolute;
+            font-size: 25px;
+            top: 40px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-shadow: 2px 2px 7px black;   
+        }
+
+        img{
+            width: 100%;
+            max-height: 330px;
+            object-fit: contain; /*se ajusta al contenedor*/
+        }  
+    }
+
+    &__bloque:hover {
+        opacity: 0.7;
+        h4{
+            color: black;
+            
+        }
+    }
+}
+
+@media (min-width:768px){
+
+    h1 {
+        font-size: 40px;  
+    }
+
+    h2{
+        font-size: 35px;
+    }
+}
+
+@media (min-width:992px){
+
+    .seccion1 div{
+        width: 45vw;
+    }
+
+    .seccion1{
+        justify-content: space-between;
+    }
+
+    .seccion1 img{
+        object-fit: cover;
+        max-height: 485px;
+    }
+
+    .seccion1 video{
+        max-width: 100%;
+    }
+
+    .seccion2{  
+        justify-content: space-between;
+    }
+
+    .seccion2 div{
+        width: 30vw;
+        box-shadow: 10px 10px 15px 1px black; 
+
+        img{
+            max-height: none;
+        }
+    }
+}

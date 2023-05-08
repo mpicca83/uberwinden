@@ -1,0 +1,49 @@
+header{
+    position: fixed;
+    width: 100vw;
+    z-index: 1000;
+}
+
+//Encabezado Superior
+.encabezadoSuperior{
+    background-color: black;
+    color: white;
+    height: 30px;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 0 10px;
+    padding-top: auto;
+
+    a{
+        padding: 0 5%;
+        font-size: 20px;
+        color: white;
+    }
+
+    h4{
+        padding-top: 7px;
+        font-size: 17px;
+    }
+}  
+
+
+//Encabezado Interior - Navegación
+
+.encabezadoInferior{
+    background-color: rgb(186, 234, 247);
+    font-family: 'Lato', sans-serif;
+    font-weight:bold;
+    font-size: 20px;
+    padding: 5px 5%; 
+
+    #logoMarca{
+        height: 50px;
+        
+    }
+
+    ul ul {
+        background-color: rgb(206, 237, 246); 
+    }
+
+}
+
