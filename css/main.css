@@ -339,6 +339,7 @@ footer .divContactanos {
 @media (min-width: 992px) {
   .seccion1 {
     flex-direction: row;
+    max-width: 80vw;
   }
   .seccion1__bloque {
     width: 45vw;
@@ -353,9 +354,10 @@ footer .divContactanos {
   }
   .seccion2 {
     justify-content: space-between;
+    max-width: 80vw;
   }
   .seccion2__bloque {
-    width: 30vw;
+    width: 25vw;
     box-shadow: 10px 10px 15px 1px black;
   }
   .seccion2__bloque img {

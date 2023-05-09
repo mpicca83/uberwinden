@@ -67,7 +67,6 @@
         opacity: 0.7;
         h4{
             color: black;
-            
         }
     }
 }
@@ -86,6 +85,8 @@
 
     .seccion1{
         flex-direction: row;
+        max-width: 80vw;
+
         &__bloque{
             width: 45vw;
 
@@ -103,9 +104,10 @@
 
     .seccion2{  
         justify-content: space-between;
+        max-width: 80vw;
 
         &__bloque{
-            width: 30vw;
+            width: 25vw;
             box-shadow: 10px 10px 15px 1px black;
 
             img{
