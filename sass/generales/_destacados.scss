@@ -1,7 +1,6 @@
-//destacados y quienes confiaron
+//destacados
 
 .seccionDestacados{
-
     display: flex;
     width: 95vw;
     margin: auto; 
@@ -30,7 +29,7 @@
         }
 
         &-fotos:hover{
-            box-shadow: 0px 0px 15px 3px black;
+            transform: scale(1.01);
         } 
     }  
 }
@@ -58,16 +57,12 @@
                     box-shadow: 0px 0px 5px 1px black;
                 }
                 img:hover{
-                    box-shadow: 0px 0px 5px 1.7px black;
+                    transform: scale(1.01);
                 }
-                
             }
-             
         }
-        
     }
 }
-
 
 @media (min-width:992px){
 
@@ -89,9 +84,10 @@
                 
                 img{    
                     box-shadow: 0px 0px 5px 1px black;
-                }   
+                } 
+                  
                 img:hover{
-                    box-shadow: 0px 0px 5px 1.7px black;
+                    transform: scale(1.01);
                 }
             }
         }

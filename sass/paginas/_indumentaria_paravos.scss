@@ -1,0 +1,67 @@
+//Indumentaria para vos...
+
+.seccion{
+
+    display: flex;
+    width: 95%;
+    margin: auto;
+    flex-direction: column;
+    gap: 10px;
+
+    &__bloque{
+        margin: auto;
+
+        img{
+            width: 100%;
+            max-width: 525px;
+            object-fit: cover; /*se ajusta al contenedor*/
+            border-radius: 5px;
+            box-shadow: 2px 2px 8px 2px black;
+        }
+
+        img:hover{
+            box-shadow: 2px 2px 8px 4px black;
+        }
+
+        h4{
+            font-family: Oswald, sans-serif;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            position: absolute;
+            font-size: 25px;
+            padding: 10px 20px;
+            text-shadow: 2px 2px 7px black;
+            
+        }
+    }
+}
+
+@media (min-width:768px){
+    
+    .seccion{
+        flex-direction: row;
+        gap: 30px;
+        max-width: 70vw;
+
+        &__bloque{
+            img{
+                max-height: 500px;
+                max-width: none;
+            }
+        }    
+    }
+}
+
+@media (min-width:992px){
+
+    .seccion{
+       
+        &__bloque{
+            
+            h4{
+                font-size: 35px;
+                transition: 1s;
+            }
+        }    
+    }
+}

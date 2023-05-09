@@ -1,0 +1,73 @@
+//Nosotros
+
+.nosotros{
+    display: flex;
+    width: 95vw;
+    max-width: 1200px;
+    flex-wrap: wrap; /*controla que no se desborde*/
+    justify-content:  center; /*centrado*/
+    align-items: center; /* centra verticalmente*/
+    margin: auto;
+    gap: 20px;
+    padding: 40px;
+    background-color: rgb(253, 246, 238);
+    border-radius: 15px;
+
+    &__texto{
+        font-size: 13px;
+        text-align: justify;
+    }
+
+    &__imagen{
+
+        img{
+            width: 100%;
+            padding: 10px;
+            object-fit: contain;
+        }
+    }
+}
+
+@media (min-width:768px){
+    .tituloNosotros{
+        margin-top: 20px;
+        font-size: 35px;
+    }
+
+    .nosotros{
+        flex-wrap: nowrap;
+        margin-top: 20px;
+
+        &__texto{
+            font-size: 15px;
+        }
+
+        &__imagen{
+            img{
+                width: 350px;
+            }
+        }
+    }
+}
+
+@media (min-width:992px){
+
+    .tituloNosotros{
+        margin-top: 20px;
+        font-size: 45px;
+    }
+
+    .nosotros{
+        flex-wrap: nowrap;
+        
+        &__texto{
+            font-size: 20px;
+        }
+
+        &__imagen{
+            img{
+                width: 500px;
+            }
+        }
+    }
+}

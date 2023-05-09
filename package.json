@@ -1,12 +1,12 @@
 {
   "name": "web-uberwinden",
   "version": "1.0.0",
-  "description": "",
+  "description": "Proyecto de práctica",
   "main": "index.js",
   "scripts": {
     "build-sass": "sass ./sass/main.scss ./css/main.css -w --no-source-map"
   },
-  "author": "",
+  "author": "Mauricio Picca",
   "license": "ISC",
   "dependencies": {
     "sass": "^1.62.1"

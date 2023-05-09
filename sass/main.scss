@@ -16,6 +16,7 @@ ul {
 
 main{
     padding-top: 100px;
+    min-height: calc(100vh - 110px);
 }
 
 h1{ 
@@ -28,12 +29,22 @@ h1{
 h2{
     font-family: 'Oswald', sans-serif;
     text-align: center;
-    font-size: 27px;
-    padding: 15px;   
+    padding: 15px;
+    margin-bottom: 0;   
 }
 
+
+
 @import "./generales/header";
-@import "./paginas/index";
 @import "./generales/destacados";
 @import "./generales/footer";
+
+@import "./paginas/index";
+@import "./paginas/nosotros";
+@import "./paginas/eventos";
+@import "./paginas/login";
+@import "./paginas/registro";
+@import "./paginas/indumentaria_paravos";
+
+
 
