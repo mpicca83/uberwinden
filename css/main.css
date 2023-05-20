@@ -69,7 +69,27 @@ header {
 .encabezadoInferior ul ul {
   background-color: rgb(206, 237, 246);
 }
+.encabezadoInferior .nav-link:hover {
+  animation: salto 1.5s infinite;
+}
 
+@keyframes salto {
+  0% {
+    transform: translate(0);
+  }
+  15% {
+    transform: translate(0, -5px);
+  }
+  30% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(0, -10px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
 .seccionDestacados {
   display: flex;
   width: 95vw;
@@ -177,33 +197,47 @@ footer i {
   padding: 0 8px;
   font-size: 18px;
   color: white;
+  transition: color 0.5s, transform 1s;
 }
-footer i:hover {
-  color: rgb(207, 207, 207);
-}
-footer .divCancelacion {
+footer .cancelacion {
   grid-column: 1/4;
   height: 30px;
 }
-footer .divCancelacion p {
+footer .cancelacion p {
   display: none;
 }
-footer .divCancelacion #botonCancelacion {
+footer .cancelacion #botonCancelacion {
   background-color: rgb(68, 68, 68);
   color: #FFFFFF;
   padding: 5px 10px;
   font-size: 10px;
   border-radius: 5px;
 }
-footer .divSeguinos {
+footer .seguinos {
   justify-self: start;
   grid-column: 1/2;
   margin: 0 15%;
 }
-footer .divContactanos {
+footer .seguinos .fa-instagram:hover {
+  color: rgb(255, 0, 0);
+  transform: scale(1.3);
+}
+footer .seguinos .fa-facebook:hover {
+  color: rgb(0, 0, 255);
+  transform: scale(1.3);
+}
+footer .contactanos {
   justify-self: end;
   grid-column: 3/4;
   margin: 0 15%;
+}
+footer .contactanos .fa-whatsapp:hover {
+  color: rgb(0, 255, 0);
+  transform: scale(1.3);
+}
+footer .contactanos .fa-envelope:hover {
+  color: rgb(255, 255, 0);
+  transform: scale(1.3);
 }
 @media (min-width: 768px) {
   footer h5 {
@@ -213,15 +247,15 @@ footer .divContactanos {
   footer i {
     font-size: 20px;
   }
-  footer .divSeguinos {
+  footer .seguinos {
     grid-row: 1/3;
     margin-left: 35%;
   }
-  footer .divContactanos {
+  footer .contactanos {
     grid-row: 1/3;
     margin-right: 35%;
   }
-  footer .divCancelacion {
+  footer .cancelacion {
     grid-row: 1/3;
     align-self: end;
   }
@@ -231,33 +265,33 @@ footer .divContactanos {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
   }
-  footer .divSeguinos {
+  footer .seguinos {
     order: 2;
     grid-column: 4/5;
     grid-row: 1/2;
     justify-self: end;
     padding-top: 20px;
   }
-  footer .divContactanos {
+  footer .contactanos {
     order: 3;
     grid-column: 5/6;
     grid-row: 1/2;
     justify-self: start;
     padding-top: 20px;
   }
-  footer .divCancelacion {
+  footer .cancelacion {
     order: 1;
     grid-column: 1/3;
     grid-row: 1/2;
     place-self: start center;
   }
-  footer .divCancelacion p {
+  footer .cancelacion p {
     display: block;
     font-size: 12px;
     margin-bottom: 4px;
     padding-top: 15px;
   }
-  footer .divCancelacion #botonCancelacion {
+  footer .cancelacion #botonCancelacion {
     font-size: 13px;
   }
   footer h6 {
@@ -267,25 +301,18 @@ footer .divContactanos {
 }
 
 .seccion1 {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
   width: 95vw;
   margin: auto;
-  flex-direction: column;
   gap: 10px;
 }
-.seccion1__bloque {
-  margin: auto;
-}
-.seccion1__bloque img {
+.seccion1__bloque-item {
   width: 100%;
+  height: 100%;
   max-width: 525px;
   object-fit: cover; /*se ajusta al contenedor*/
-  border-radius: 5px;
-}
-.seccion1__bloque video {
-  width: 100%;
-  max-width: 525px;
-  object-fit: cover; /*recorta para que no queden espacios*/
   border-radius: 5px;
 }
 
@@ -322,10 +349,8 @@ footer .divContactanos {
   object-fit: contain; /*se ajusta al contenedor*/
 }
 .seccion2__bloque:hover {
-  opacity: 0.7;
-}
-.seccion2__bloque:hover h4 {
-  color: black;
+  animation: escalar 0.75s infinite;
+  animation-direction: alternate;
 }
 
 @media (min-width: 768px) {
@@ -338,19 +363,12 @@ footer .divContactanos {
 }
 @media (min-width: 992px) {
   .seccion1 {
-    flex-direction: row;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
     max-width: 80vw;
   }
-  .seccion1__bloque {
-    width: 45vw;
-  }
-  .seccion1__bloque img {
+  .seccion1__bloque-item {
     max-width: 100%;
-    max-height: 390px;
-  }
-  .seccion1__bloque video {
-    max-width: 100%;
-    max-height: 390px;
   }
   .seccion2 {
     justify-content: space-between;
@@ -362,6 +380,15 @@ footer .divContactanos {
   }
   .seccion2__bloque img {
     max-height: none;
+  }
+}
+@keyframes escalar {
+  0% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1.05);
+    box-shadow: 20px 20px 30px 3px rgb(0, 0, 0);
   }
 }
 .nosotros {
@@ -623,16 +650,14 @@ footer .divContactanos {
 }
 .seccion__bloque {
   margin: auto;
+  box-shadow: 2px 2px 8px 2px black;
+  border-radius: 5px;
 }
 .seccion__bloque img {
   width: 100%;
   max-width: 525px;
   object-fit: cover; /*se ajusta al contenedor*/
   border-radius: 5px;
-  box-shadow: 2px 2px 8px 2px black;
-}
-.seccion__bloque img:hover {
-  box-shadow: 2px 2px 8px 4px black;
 }
 .seccion__bloque h4 {
   font-family: Oswald, sans-serif;
@@ -642,6 +667,12 @@ footer .divContactanos {
   font-size: 25px;
   padding: 10px 20px;
   text-shadow: 2px 2px 7px black;
+}
+.seccion__bloque:hover {
+  box-shadow: 2px 2px 8px 4px black;
+}
+.seccion__bloque:hover h4 {
+  animation: resaltar 0.5s infinite alternate;
 }
 
 @media (min-width: 768px) {
@@ -659,5 +690,13 @@ footer .divContactanos {
   .seccion__bloque h4 {
     font-size: 35px;
     transition: 1s;
+  }
+}
+@keyframes resaltar {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
   }
 }

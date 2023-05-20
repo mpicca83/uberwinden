@@ -42,5 +42,28 @@ header{
     ul ul {
         background-color: rgb(206, 237, 246); 
     }
+
+    .nav-link:hover{
+        animation: salto 1.5s infinite;
+    }
 }
+
+@keyframes salto {
+    0% {
+        transform: translate(0);
+    }
+    15% {
+        transform: translate(0 , -5px);
+    }
+    30% {
+        transform: translate(0);
+    }
+    50% {
+        transform: translate(0 , -10px);
+    }
+    100% {
+        transform: translate(0px);
+    }
+}
+
 

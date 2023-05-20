@@ -10,17 +10,15 @@
 
     &__bloque{
         margin: auto;
+        box-shadow: 2px 2px 8px 2px black;
+        border-radius: 5px;
 
         img{
             width: 100%;
             max-width: 525px;
             object-fit: cover; /*se ajusta al contenedor*/
             border-radius: 5px;
-            box-shadow: 2px 2px 8px 2px black;
-        }
-
-        img:hover{
-            box-shadow: 2px 2px 8px 4px black;
+            
         }
 
         h4{
@@ -33,6 +31,14 @@
             text-shadow: 2px 2px 7px black;
             
         }
+    }
+
+    &__bloque:hover{
+        box-shadow: 2px 2px 8px 4px black;
+    }
+    
+    &__bloque:hover h4{
+        animation: resaltar 0.5s infinite alternate;
     }
 }
 
@@ -63,5 +69,14 @@
                 transition: 1s;
             }
         }    
+    }
+}
+
+@keyframes resaltar{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
     }
 }
