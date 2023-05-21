@@ -8,3 +8,5 @@ Hasta el momento se aplicó lo siguiente:
     *GIT
     *GITHUB
     *SASS
+    *ANIMACIONES
+    *SEO
