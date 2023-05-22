@@ -10,3 +10,4 @@ Hasta el momento se aplicó lo siguiente:
     *SASS
     *ANIMACIONES
     *SEO
+    *MAPAS DEL SITIO

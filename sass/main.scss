@@ -34,17 +34,20 @@ h2{
 }
 
 
-
+//Generales
 @import "./generales/header";
 @import "./generales/destacados";
 @import "./generales/footer";
 
+//Páginas
 @import "./paginas/index";
 @import "./paginas/nosotros";
 @import "./paginas/eventos";
 @import "./paginas/login";
 @import "./paginas/registro";
 @import "./paginas/indumentaria_paravos";
+@import "./paginas/personaliza_tu_indumentaria";
+
 
 
 

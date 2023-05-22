@@ -78,7 +78,10 @@
             flex-wrap: nowrap;
             
             &-parrafo{
-                width: 33.3vw;  
+                width: 33.3vw;
+                min-width: 360px;
+
+
             }
 
             &-multimedia{
