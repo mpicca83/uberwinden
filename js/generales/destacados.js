@@ -46,8 +46,9 @@ function filtrarProductosPorCaracteristica(caracteristica) {
   }
 
 
-const destacados = document.querySelector('.seccionDestacados')
+const destacados = document.querySelector('.Destacados')
 const divDestacados = document.createElement('DIV')
+divDestacados.classList.add('seccionDestacados')
 divDestacados.innerHTML = `
             <!--Para vista movil-->
     <div id="carouselExampleDarkMovil" class="carousel carousel-dark slide  seccionDestacados__movil" data-bs-ride="carousel">
