@@ -16,7 +16,7 @@ ul {
 
 main{
     padding-top: 100px;
-    min-height: calc(100vh - 110px);
+    min-height: calc(100vh - 210px);
 }
 
 h1{ 
@@ -37,7 +37,9 @@ h2{
 //Generales
 @import "./generales/header";
 @import "./generales/destacados";
+@import "./generales/modal";
 @import "./generales/footer";
+
 
 //Páginas
 @import "./paginas/index";
@@ -47,6 +49,8 @@ h2{
 @import "./paginas/registro";
 @import "./paginas/indumentaria_paravos";
 @import "./paginas/personaliza_tu_indumentaria";
+@import "./paginas/en_construccion";
+@import "./paginas/productos";
 
 
 

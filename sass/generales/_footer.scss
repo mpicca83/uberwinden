@@ -1,4 +1,4 @@
-footer{
+.footer{
     margin-top: 20px;
     padding: 15px;
     width: 100%;
@@ -7,7 +7,7 @@ footer{
     font-size: 12px;
     font-family: sans-serif;
 
-    .footer{
+    .footer_Contenedor{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 1fr);
@@ -83,7 +83,7 @@ footer{
     
 
     @media (min-width:768px){
-        .footer{
+        .footer_Contenedor{
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(3, 1fr);
             max-height: 200px;
@@ -104,7 +104,7 @@ footer{
 
     @media (min-width:992px){
         margin-top: 30px;
-        .footer{
+        .footer_Contenedor{
             grid-template-columns: repeat(4, 1fr), 2fr;
             grid-template-rows: repeat(2, 1fr);
             max-height: 200px;

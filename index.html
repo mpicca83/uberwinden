@@ -25,79 +25,13 @@
     <link rel="stylesheet" href="./css/main.css"/>
 </head>
 <body>
-    <header>
-        <!-- Parte superior del encabezado-->
-        <div id="carouselExampleAutoplaying" class="carousel slide encabezadoSuperior" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <h4><b>ENVIOS GRATIS </b>DESDE $19.999</h4>
-                </div>
-                <div class="carousel-item">
-                    <h4>3 CUOTAS <b>SIN INTERÉS</b></h4>
-                </div>
-                <div class="carousel-item">
-                    <a href="https://www.instagram.com/uberwindensportwear/" target="_blank"><i class="fa-brands fa-instagram fa-fade"></i></a>
-                    <a href="https://www.facebook.com/voleyventas6" target="_blank"><i class="fa-brands fa-facebook fa-fade"></i></a>
-                    <a href="https://chatwith.io/es/s/uberwinden" target="_blank"><i class="fa-brands fa-whatsapp fa-fade"></i></a>
-                    <a href="mailto:uberwindensportwear@outlook.es?Subject=Te%20contancto%20desde%20la%20web" target="_blank"><i class="fa-regular fa-envelope fa-fade"></i></a>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-        <!-- Parte inferior del encabezado-->
-        <nav class="navbar navbar-expand-lg encabezadoInferior">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="./index.html"><img src="./assets/images/logoUberwinden.png" alt="Logo Überwinden" id="logoMarca"/></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto me-2 mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item fw-bold" href="./pages/indumentaria_paravos.html">Para vos...</a></li>
-                                <li><a class="dropdown-item ps-5" href="">Hombre</a></li>
-                                <li><a class="dropdown-item ps-5" href="">Mujer</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item fw-bold" href="./pages/personaliza_tu_indumentaria.html">Para tu club...</a></li>
-                                <li><a class="dropdown-item ps-5" href="">Merchandising</a></li>
-                                <li><a class="dropdown-item ps-5" href="./pages/personaliza_tu_indumentaria.html">Personaliza tu indumentaria</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./pages/eventos.html">Eventos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./pages/login.html"><i class="fa-solid fa-user"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href=""><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
+    <header class="header">
+        <script src="./js/generales/header.js"></script>
     </header>
     <main>
+
         <h1>Überwinden - Ropa deportiva</h1>
+
         <section class="seccion1">
             <div id="carouselExampleFade" class="carousel slide carousel-fade seccion1__bloque" data-bs-ride="carousel">
                 <div class="carousel-inner p-0">
@@ -127,147 +61,37 @@
                 <video class="seccion1__bloque-item" src="./assets/videos/videoMain1.mp4" controls autoplay loop muted alt="Presentación camiseta voley Barrio Parque"></video>
             </div>
         </section>
+
         <h2 id="tituloIndumentaria">INDUMENTARIA</h2>
+
         <section class="seccion2">
             <div class="seccion2__bloque">
                 <a href="./pages/indumentaria_paravos.html"><h4>Para vos</h4><img src="./assets/images/imgParaVos.jpg" alt="Productos para vos"/></a>
             </div>
             <div class="seccion2__bloque">
-                <a href=""><h4>Para tu club</h4><img src="./assets/images/imgParaTuClub.jpg" alt="Productos para tu club"/></a>
+                <a href="./pages/en_construccion.html"><h4>Para tu club</h4><img src="./assets/images/imgParaTuClub.jpg" alt="Productos para tu club"/></a>
             </div>
             <div class="seccion2__bloque">
                 <a href="./pages/eventos.html"><h4>Eventos</h4><img src="./assets/images/imgEventos.jpg" alt="Eventos"/></a>
             </div>
         </section>
+
         <h2>PRODUCTOS DESTACADOS</h2>
+
         <section class="seccionDestacados">
-            <!--Para vista movil-->
-            <div id="carouselExampleDarkMovil" class="carousel carousel-dark slide  seccionDestacados__movil" data-bs-ride="carousel">
-                <div class="carousel-inner p-0 seccionDestacados__movil-fotos">
-                    <div class="carousel-item active p-0">
-                        <a href=""><img src="./assets/images/cvCamisetaTitular.jpg" class="d-block w-100" alt="Camiseta titular Córdoba Voley"/></a>
-                    </div>
-                    <div class="carousel-item p-0">
-                        <a href=""><img src="./assets/images/mvcCamisetaTitular.jpg" class="d-block w-100" alt="Camiseta titular Monteros Voley"/></a>
-                    </div>
-                    <div class="carousel-item p-0">
-                        <a href=""><img src="./assets/images/atenasCamisetaFemenino1.jpg" class="d-block w-100" alt="Camiseta titular voley Atenas"/></a>
-                    </div>
-                    <div class="carousel-item p-0">
-                        <a href=""><img src="./assets/images/normal3CamisetaTitular.jpg" class="d-block w-100" alt="Camiseta titular voley Normal 3"/></a>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDarkMovil" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDarkMovil" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Siguiente</span>
-                </button>
-            </div>
-                <!--Para vista tablet-->
-                <div id="carouselExampleDarkTablet" class="carousel carousel-dark slide seccionDestacados__tablet" data-bs-ride="carousel">
-                    <div class="carousel-inner p-0 seccionDestacados__tablet-fotos">
-                        <div class="carousel-item active seccionDestacados__tablet-fotos-bloque">
-                            <div class="row">
-                                <div class="col-6">
-                                    <a href=""><img src="./assets/images/cvCamisetaTitular.jpg" class="d-block w-100" alt="Camiseta titular Córdoba Voley"/></a>
-                                </div>
-                                <div class="col-6">
-                                    <a href=""><img src="./assets/images/mvcCamisetaTitular.jpg" class="d-block w-100" alt="Camiseta titular Monteros Voley"/></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item seccionDestacados__tablet-fotos-bloque">
-                            <div class="row">
-                                <div class="col-6">
-                                    <a href=""><img src="./assets/images/atenasCamisetaFemenino1.jpg" class="d-block w-100" alt="Camiseta titular voley Atenas"/></a>
-                                </div>
-                                <div class="col-6">
-                                    <a href=""><img src="./assets/images/normal3CamisetaTitular.jpg" class="d-block w-100" alt="Camiseta titular voley Normal 3"/></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDarkTablet" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Anterior</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDarkTablet" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Siguiente</span>
-                    </button>
-                </div>
-            <!--Para vista desktop-->
-            <div id="carouselExampleDarkDesktop" class="carousel carousel-dark slide seccionDestacados__desktop" data-bs-ride="carousel">
-                <div class="carousel-inner p-0 seccionDestacados__desktop-fotos">
-                    <div class="carousel-item active seccionDestacados__desktop-fotos-bloque">
-                        <div class="row">
-                            <div class="col-3">
-                                <a href=""><img src="./assets/images/cvCamisetaTitular.jpg" class="d-block w-100" alt="Camiseta titular Córdoba Voley"/></a>
-                            </div>
-                            <div class="col-3">
-                                <a href=""><img src="./assets/images/mvcCamisetaTitular.jpg" class="d-block w-100" alt="Camiseta titular Monteros Voley"/></a>
-                            </div>
-                            <div class="col-3">
-                                <a href=""><img src="./assets/images/atenasCamisetaFemenino1.jpg" class="d-block w-100" alt="Camiseta titular voley Atenas"/></a>
-                            </div>
-                            <div class="col-3">
-                                <a href=""><img src="./assets/images/normal3CamisetaTitular.jpg" class="d-block w-100" alt="Camiseta titular voley Normal 3"/></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDarkDesktop" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDarkDesktop" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Siguiente</span>
-                </button>
-            </div>
-
+            <script src="./js/generales/destacados.js"></script>
         </section>
-    </main>
-    <footer>
-        <div class="footer">
-            <ul class="tiendaOnline">
-                <li><h5>Tienda online</h5></li>
-                <li><a href="">Hombre</a></li>
-                <li><a href="">Mujer</a></li>
-                <li><a href="">Merchandising clubes</a></li>
-                <li><a href="./pages/personaliza_tu_indumentaria.html">Personaliza tu indumentaria</a></li>
-            </ul>
-            <ul class="ayuda">
-                <li><h5>Ayuda</h5></li>
-                <li><a href="">Preguntas frecuentes</a></li>
-                <li><a href="">Politica de envíos</a></li>
-                <li><a href="">Cambio y devoluciones</a></li>
-                <li><a href="">Medios de pago</a></li>
-                <li><a href="">Cancelación de compra</a></li>
-            </ul>
-            <ul class="acercaDe">
-                <li><h5>Acerca de Überwinden</h5></li>
-                <li><a href="./pages/nosotros.html">Quines somos</a></li>
-                <li><a href="./pages/eventos.html">Eventos</a></li>
-                <li><a href="">Tiendas</a></li>
-            </ul>
-            <ul class="usuario">
-                <li><h5>Usuario</h5></li>
-                <li><a href="./pages/login.html">Iniciar sesión</a></li>
-                <li><a href="./pages/registro.html">Registrate</a></li>
 
-            </ul>
-            <ul class="iconos">
-                <li><a href="https://www.instagram.com/uberwindensportwear/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="https://www.facebook.com/voleyventas6" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a href="https://chatwith.io/es/s/uberwinden" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
-                <li><a href="mailto:uberwindensportwear@outlook.es?Subject=Te%20contancto%20desde%20la%20web" target="_blank"><i class="fa-regular fa-envelope"></i></a></li>
-            </ul>
-            <h6>&copy; 2023 ÜBERWINDEN Todos los derechos reservados</h6>
-        </div>
+    </main>
+
+    <div class="contenedor__modal" >
+        <script src="../js/listas/lista_productos.js"></script>
+        <script src="../js/generales/modal.js"></script>
+        <script src="../js/generales/carrito.js"></script>
+    </div>
+
+    <footer class="footer">
+        <script src="./js/generales/footer.js"></script>
     </footer>
 </body>
 </html>

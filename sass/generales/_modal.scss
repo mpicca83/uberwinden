@@ -1,0 +1,166 @@
+.encabezado{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+    padding-bottom: 16px;
+    gap: 10px;
+    
+    .producto{
+        display: none;
+    }
+    
+    div{
+        text-align: center;
+        padding: 0px 4px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+   
+}
+.prod{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    gap: 5px;
+
+    hr{
+        grid-column: 1/5;
+    }
+
+    .tituloProducto{
+        grid-column: 1/5;
+        font-weight: bold;
+        font-size: 16px;
+
+    }
+
+    .cantidad{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 0 18px;
+
+        #botonResta{
+            height: 30px;
+            width: 30px;
+        }
+
+        #botonSuma{
+            height: 30px;
+            width: 30px;
+        }
+    }
+
+    .precioUnitario{
+        padding: 0 10px;
+    }
+
+    .totalProducto{
+        font-weight: bold;
+        padding: 0 10px;
+    }
+
+    .boton{
+        padding: 0 10px 0 0;
+    }
+}
+
+.modal-footer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    
+    p{
+        grid-column: 1/3;
+        position: static;
+        text-align: center;
+    }
+}
+
+@media (min-width:425px){
+    .prod{
+        .cantidad{
+            flex-direction: row;
+            
+            span{
+                margin: 6px;
+            }
+        }
+    }
+}
+
+@media (min-width:768px){
+    .encabezado{
+        grid-template-columns: repeat(5, 1fr);
+        .producto{
+            display: block;
+        }
+        
+        div{
+            font-size: 16px;
+        }
+    }
+
+    .prod{
+        grid-template-columns: repeat(5, 1fr);
+        font-size: 18px;
+
+        hr{
+            grid-column: 1/6;
+        }
+    
+        .tituloProducto{
+            grid-column: 1/1;
+            font-weight:600;
+        }
+    
+        .cantidad{
+            padding: 0;
+    
+            #botonResta{
+                width: 35px;
+            }
+    
+            #botonSuma{
+                width: 35px;
+            }
+        }
+    
+        .totalProducto{
+            font-weight:400;
+        }
+    }
+}
+
+@media (min-width:992px){
+    .encabezado{
+        div{
+            font-size: 20px;
+        }
+    }
+
+    .prod{
+        .cantidad{
+            display: block;
+        }
+    }
+
+    .modal-footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        .btn-secondary{
+            order: -1;
+            margin-left: 100px;
+            padding: 8px 40px;
+        }
+        .btn-primary{
+           padding: 8px 40px;
+           margin-right: 100px;
+        }
+    }
+}

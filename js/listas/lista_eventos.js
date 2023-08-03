@@ -1,0 +1,35 @@
+// En categoría ingresar "foto" si en multimedia solo contiene fotos y "mixto" si contiene foto y video
+
+const eventos = 
+[
+    {
+        id: 1,
+        categoria: 'foto',
+        titulo: 'Desfile en Checa Nueva Córdoba',
+        descripción: 'Überwinden participó en el Desfile realizado en el bliche Checa de Nueva Córdoba y fue todo un éxito. Los modelos lucieron prendas de alta calidad y diseño innovador, lo que cautivó la atención de los asistentes al evento. La marca Überwinden ha demostrado una vez más su compromiso con la moda deportiva de vanguardia. ¡Enhorabuena a Überwinden por su exitosa participación en el desfile!.',
+        foto1: '../assets/images/eventoCheca1.jpg',
+        altFoto1: 'Desfile en Checa Foto 1',
+        foto2: '../assets/images/eventoCheca2.jpeg',
+        altFoto2: 'Desfile en Checa Foto 2'
+    },
+    {
+        id: 2,
+        categoria: 'foto',
+        titulo: 'Torneo Golf - La Cascada Country Golf Manantiales',
+        descripción: 'La marca de ropa deportiva Überwinden fue el orgulloso patrocinador del Torneo de Golf celebrado en el prestigioso La Cascada Country Golf Manantiales. El evento reunió a entusiastas del golf de alto nivel y amantes del deporte, quienes disfrutaron de una emocionante jornada en un entorno natural excepcional. El logo de Überwinden estuvo presente en diferentes puntos del torneo, desde los carteles de bienvenida hasta los premios otorgados a los ganadores. Esta destacada participación permitió a la marca fortalecer su presencia en el ámbito deportivo y ampliar su alcance entre los aficionados al golf.',
+        foto1: '../assets/images/eventoGolf.jpeg',
+        altFoto1: 'Evento Golf La Cascada Foto 1',
+        foto2: '../assets/images/imgEventos.jpg',
+        altFoto2: 'Evento Golf La Cascada Foto 2'
+    },
+    {
+        id: 3,
+        categoria: 'mixto',
+        titulo: 'Desfile Real 9° Edición',
+        descripción: 'La marca de ropa deportiva Überwinden destacó en el Desfile Real 9ª edición en Córdoba. Presentó una colección vanguardista que combina funcionalidad y diseño contemporáneo. Las prendas de alta calidad y diseño ergonómico se adaptaron a diversas disciplinas deportivas. La participación de Überwinden fue aclamada por el público y la prensa, consolidando su posición en la moda deportiva. Esta experiencia representa un hito importante en su trayectoria y fortalece su compromiso con la calidad y la innovación. Überwinden continúa expandiendo su influencia en el ámbito deportivo y conquistando nuevos seguidores.',
+        foto: '../assets/images/eventoDesfile1.jpg',
+        altFoto: 'Fotos Desfile Real',
+        video: '../assets/videos/eventoDesfileReal.mp4',
+        altVideo: 'Video Desfile Real'
+    }
+]
