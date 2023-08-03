@@ -1,6 +1,10 @@
 // Creación de Header de forma dinamica por DOM
 
 let ruta = ".."
+if (window.location.pathname === "/index.html"){
+    ruta = "."
+}
+
 const header = document.querySelector('.header')
 
     //Encabezado parte superior
@@ -38,7 +42,7 @@ const headerContenedorInferior = document.createElement('NAV')
 headerContenedorInferior.classList.add('navbar', 'navbar-expand-lg', 'encabezadoInferior')
 headerContenedorInferior.innerHTML = `
     <div class="container-fluid">
-        <a class="navbar-brand" href="${ruta}/index.html"><img src="../assets/images/logoUberwinden.png" alt="Logo Überwinden" id="logoMarca"/></a>
+        <a class="navbar-brand" href="${ruta}/index.html"><img src="${ruta}/assets/images/logoUberwinden.png" alt="Logo Überwinden" id="logoMarca"/></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -93,12 +97,8 @@ enlaces.forEach((enlace) => {
     if (href === rutaActual) {
         enlace.classList.add('active')
     }
-
-    let ruta = ".."
-    if (rutaActual === "/index.html"){
-        ruta = "."
-    }
 })
 
 header.appendChild(headerContenedorSuperior)
 header.appendChild(headerContenedorInferior)
+
