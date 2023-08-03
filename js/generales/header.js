@@ -1,9 +1,9 @@
 // Creación de Header de forma dinamica por DOM
 
 let ruta = ".."
-if (window.location.pathname === "/index.html"){
-    ruta = "."
-}
+// if (window.location.pathname === "/index.html"){
+//     ruta = "."
+// }
 
 const header = document.querySelector('.header')
 
