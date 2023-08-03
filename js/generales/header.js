@@ -4,15 +4,7 @@ let ruta = ".."
     
     if (document.title == "Überwinden - Ropa deportiva") {
         ruta = "."
-        console.log(document.title)
     }
-    
-
-
-
-// if (window.location.pathname === "/index.html"){
-//     ruta = "."
-// }
 
 const header = document.querySelector('.header')
 
