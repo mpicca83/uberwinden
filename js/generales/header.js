@@ -37,35 +37,35 @@ const headerContenedorInferior = document.createElement('NAV')
 headerContenedorInferior.classList.add('navbar', 'navbar-expand-lg', 'encabezadoInferior')
 headerContenedorInferior.innerHTML = `
     <div class="container-fluid">
-        <a class="navbar-brand" href="/index.html"><img src="/assets/images/logoUberwinden.png" alt="Logo Überwinden" id="logoMarca"/></a>
+        <a class="navbar-brand" href="../index.html"><img src="../assets/images/logoUberwinden.png" alt="Logo Überwinden" id="logoMarca"/></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto me-2 mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="/index.html">Inicio</a>
+                    <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/pages/nosotros.html">Nosotros</a>
+                    <a class="nav-link" href="../pages/nosotros.html">Nosotros</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item fw-bold" href="/pages/indumentaria_paravos.html">Para vos...</a></li>
-                        <li><a class="dropdown-item ps-5" href="/pages/productos.html?categoria=Hombre">Hombre</a></li>
-                        <li><a class="dropdown-item ps-5" href="/pages/productos.html?categoria=Mujer">Mujer</a></li>
+                        <li><a class="dropdown-item fw-bold" href="../pages/indumentaria_paravos.html">Para vos...</a></li>
+                        <li><a class="dropdown-item ps-5" href="../pages/productos.html?categoria=Hombre">Hombre</a></li>
+                        <li><a class="dropdown-item ps-5" href="../pages/productos.html?categoria=Mujer">Mujer</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item fw-bold" href="/pages/personaliza_tu_indumentaria.html">Para tu club...</a></li>
-                        <li><a class="dropdown-item ps-5" href="/pages/en_construccion.html">Merchandising</a></li>
-                        <li><a class="dropdown-item ps-5" href="/pages/personaliza_tu_indumentaria.html">Personaliza tu indumentaria</a></li>
+                        <li><a class="dropdown-item fw-bold" href="../pages/personaliza_tu_indumentaria.html">Para tu club...</a></li>
+                        <li><a class="dropdown-item ps-5" href="../pages/en_construccion.html">Merchandising</a></li>
+                        <li><a class="dropdown-item ps-5" href="../pages/personaliza_tu_indumentaria.html">Personaliza tu indumentaria</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/pages/eventos.html">Eventos</a>
+                    <a class="nav-link" href="../pages/eventos.html">Eventos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/pages/login.html"><i class="fa-solid fa-user"></i></a>
+                    <a class="nav-link" href="../pages/login.html"><i class="fa-solid fa-user"></i></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal" href=""><i class="fa-sharp fa-solid fa-cart-shopping"><span id="iconoCarrito"></span></i></a>
