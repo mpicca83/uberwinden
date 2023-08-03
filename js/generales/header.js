@@ -1,13 +1,12 @@
 // Creación de Header de forma dinamica por DOM
 let ruta = ".."
 
-document.addEventListener("DOMContentLoaded", function () {
     
-    if (document.title === "Überwinden - Ropa deportiva") {
+    if (document.title == "Überwinden - Ropa deportiva") {
         ruta = "."
+        console.log(document.title)
     }
     
-})
 
 
 
