@@ -1,6 +1,5 @@
 // Creación de Footer de forma dinamica por DOM
 let rutaInicial = ".."
-
 if (document.title == "Überwinden - Ropa deportiva") {
     rutaInicial = "."
 }

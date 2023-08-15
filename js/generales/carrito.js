@@ -21,26 +21,26 @@ const comprobarProductoEnCarrito = (id) => {
 const mostrarProductoCarrito = (producto) => {
     const subtotal = producto.cantidad * producto.precio
     const contenedor = document.querySelector('.contenedor__modal-sumarCarrito')
-    document.createElement('hr')
     const div = document.createElement('DIV')
     div.classList.add('row', 'prod')
     div.innerHTML = `
         <hr>
         <div class="col tituloProducto">${producto.titulo}</div>
-            <div class="col cantidad">
-                <button id="botonResta" value="${producto.id} type="button" class="btn btn-sm btn-secondary">-</button>
-                <span id="cantidadProducto${producto.id}">${producto.cantidad}</span>
-                <button id="botonSuma" value="${producto.id} type="button" class="btn btn-sm btn-secondary">+</button>
-            </div>
-        <div class="col precioUnitario">$<span id="precioUnitario">${producto.precio}</span></div>
-        <div class="col totalProductol">$<span id="totalProducto">${subtotal}</span></div>
-        <div class="col boton">   
-            <button value="${producto.id}" type="button" class="btn btn-sm btn-danger">Eliminar</button>
+        <div class="col cantidad">
+            <button value="btnResta${producto.id}" type="button" class="btn btn-sm btn-secondary botonResta">-</button>
+            <span id="cantidadProducto${producto.id}">${producto.cantidad}</span>
+            <button value="btnSuma${producto.id}" type="button" class="btn btn-sm btn-secondary botonSuma">+</button>
         </div>
-        
+        <div class="col precioUnitario">$<span id="precioUnitario">${producto.precio}</span></div>
+        <div class="col totalProducto">$<span id="totalProducto">${subtotal}</span></div>
+        <div class="col boton">   
+            <button value="btnElimina${producto.id}" type="button" class="btn btn-sm btn-danger botonEliminar">Eliminar</button>
+        </div>
+
         <br>
     `
     contenedor.appendChild(div)
+    escuchar()
 }
 
 const actualizarTotalesCarrito = (carrito) => {
@@ -61,40 +61,96 @@ const pintarCarrito = (carrito) => {
   
     carrito.forEach(producto => {
         const subtotal = producto.cantidad * producto.precio
-        document.createElement('hr')
         const div = document.createElement('DIV')
         div.classList.add('row', 'prod')
         div.innerHTML = `
             <hr>
             <div class="col tituloProducto">${producto.titulo}</div>
             <div class="col cantidad">
-                <button id="botonResta" value="${producto.id}" type="button" class="btn btn-sm btn-secondary">-</button>
+                <button value="btnResta${producto.id}" type="button" class="btn btn-sm btn-secondary botonResta">-</button>
                 <span id="cantidadProducto${producto.id}">${producto.cantidad}</span>
-                <button id="botonSuma" value="${producto.id}" type="button" class="btn btn-sm btn-secondary">+</button>
+                <button value="btnSuma${producto.id}" type="button" class="btn btn-sm btn-secondary botonSuma">+</button>
             </div>
             <div class="col precioUnitario">$<span id="precioUnitario">${producto.precio}</span></div>
             <div class="col totalProducto">$<span id="totalProducto">${subtotal}</span></div>
             <div class="col boton">   
-                <button value="${producto.id}" type="button" class="btn btn-sm btn-danger botonEliminar">Eliminar</button>
+                <button value="btnElimina${producto.id}" type="button" class="btn btn-sm btn-danger botonEliminar">Eliminar</button>
             </div>
             
             <br>
             `
         contenedor.appendChild(div)    
     })
+    escuchar()
 }
 
-const eliminarProductoDeCarrito = (id) => {
-    const producto = carrito.find(producto => producto.id == id)
-    producto.cantidad = 1
-    const productoIndex = carrito.findIndex(producto => producto.id == id)
-    carrito.splice(productoIndex, 1)
+const btnEliminar = (id) => {
+    alertaCompuesta(
+        'Eliminar Producto',
+        '¿Confirma la eliminación del producto?',
+        'Eliminar',
+        'El producto fue eliminado.',
+        () => eliminarProducto(id))
+}
+
+const btnVaciar = () => {
+    if (carrito.length === 0){
+        alertaSimple(
+            'El Carrito esta vacío',
+            '',
+            'info',
+            2000,
+        )
+    }else{
+        alertaCompuesta(
+            'Vaciar Carrito',
+            '¿Desea vaciar el carrito de compra?',
+            'Vaciar',
+            'El carrito se vació correctamente.',
+            () => vaciarCarrito()
+        )
+    }
+}
+
+const btnPagar = () => {
+    if (carrito.length === 0){
+        alertaSimple(
+            'El Carrito esta vacío',
+            '',
+            'info',
+            3000,
+        )
+    }else{
+        alertaSimple(
+            'El pago se realizó con éxito.',
+            'Muchas gracias por su compra!',
+            'success',
+            3000,
+        )
+        vaciarCarrito()
+    }
+}
+
+const eliminarProducto = (id) => {
+    const producto = carrito.find(producto => `btnElimina${producto.id}` == id)
+            producto.cantidad = 1
+            const productoIndex = carrito.findIndex(producto => `btnElimina${producto.id}` == id)
+            carrito.splice(productoIndex, 1)
+            pintarCarrito(carrito)
+            actualizarTotalesCarrito(carrito)
+}
+
+const vaciarCarrito = () => {
+    carrito.forEach(producto => 
+        producto.cantidad = 1
+    )
+    carrito =[]
     pintarCarrito(carrito)
     actualizarTotalesCarrito(carrito)
 }
 
 const restarProductos = (id) => {
-    const producto = carrito.find(producto => producto.id == id)
+    const producto = carrito.find(producto => `btnResta${producto.id}` == id)
     if (producto.cantidad > 1){
         producto.cantidad--
     }
@@ -103,7 +159,7 @@ const restarProductos = (id) => {
 }
 
 const sumarProductos = (id) => {
-    const producto = carrito.find(producto => producto.id == id)
+    const producto = carrito.find(producto => `btnSuma${producto.id}` == id)
     producto.cantidad++
     pintarCarrito(carrito)
     actualizarTotalesCarrito(carrito)

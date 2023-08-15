@@ -1,4 +1,4 @@
-const contenedor = document.querySelector('.contenedor__modal')
+const contenedorModal = document.querySelector('.contenedor__modal')
 const div = document.createElement('div')
 div.classList.add('contenedor__modal-carrito')
 
@@ -27,22 +27,33 @@ div.innerHTML = `
 
                 <div class="modal-footer">
                     <p class="totalCarrito  fw-bold">Importe total: $<span id="importeTotal">0</span></p>
-                    <button type="button" class="btn btn-secondary">Vaciar</button>
-                    <button type="button" class="btn btn-primary">Pagar</button>
+                    <button type="button" id="btnVaciar" class="btn btn-secondary">Vaciar</button>
+                    <button type="button" id="btnPagar" class="btn btn-primary">Pagar</button>
                 </div>
             </div>
         </div>
     </div>
 `
-contenedor.appendChild(div)
+contenedorModal.appendChild(div)
 
-contenedor.addEventListener('click', (e) => {
+
+const gestionarClick = (e) => {   
     e.stopPropagation();
     if (e.target.classList.contains('botonEliminar')) {
-        eliminarProductoDeCarrito(e.target.value)
-    }else if (e.target.id === "botonResta"){
-        restarProductos(e.target.value)
-    }else if (e.target.id === 'botonSuma'){
-        sumarProductos(e.target.value)
+        btnEliminar(e.target.value);
+    } else if (e.target.classList.contains("botonResta")) {
+       restarProductos(e.target.value);
+    } else if (e.target.classList.contains('botonSuma')) {
+        sumarProductos(e.target.value);
+    } else if (e.target.id === 'btnVaciar') {
+        btnVaciar()
+    } else if (e.target.id === 'btnPagar') {
+        btnPagar()
     }
-})
+
+}
+
+const escuchar = () => {
+    contenedorModal.addEventListener('click', gestionarClick);
+}
+

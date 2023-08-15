@@ -884,7 +884,7 @@ header {
   top: -30px;
   font-size: 12px;
 }
-.contacto button[type=submit] {
+.contacto #button[type=submit] {
   justify-self: center;
   border: none;
   background-color: #a5a5a5;
@@ -892,7 +892,7 @@ header {
   cursor: pointer; /*para que el cursor se transforme a una mano cuando paso por el boton*/
   border-radius: 5px;
 }
-.contacto button[type=submit]:hover {
+.contacto #button[type=submit]:hover {
   background-color: #000;
   color: #fff;
 }
@@ -924,10 +924,13 @@ h3 {
     grid-column: 1/3;
     font-size: 25px;
   }
+  .contacto .valorIngresado {
+    font-size: 18px;
+  }
   .contacto textarea {
     height: 220px;
   }
-  .contacto button {
+  .contacto #button {
     grid-column: 1/3;
   }
   .title_quienes-confiaron {

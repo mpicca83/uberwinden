@@ -1,10 +1,8 @@
 // Creación de Header de forma dinamica por DOM
 let ruta = ".."
-
-    
-    if (document.title == "Überwinden - Ropa deportiva") {
-        ruta = "."
-    }
+if (document.title == "Überwinden - Ropa deportiva") {
+    ruta = "."
+}
 
 const header = document.querySelector('.header')
 
