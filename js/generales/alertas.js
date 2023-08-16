@@ -49,3 +49,23 @@ const alertaCompuesta = (titulo1, texto, boton, titulo2, funcion) =>{
         }
     })
 }
+
+const alertaDePago = () =>{
+    Swal.fire({
+        title: "Confirmación de compra",
+        icon: 'question',
+        showCancelButton: true,
+        cancelButtonColor: '#6c757d',
+        cancelButtonText: 'Cancelar',
+        confirmButtonColor: '#3085d6',
+        confirmButtonText: "Confirmar",
+        position: 'top',
+
+    }).then((result) =>{
+
+        if(result.isConfirmed){
+            pagarMP()
+        }
+    })
+    
+}

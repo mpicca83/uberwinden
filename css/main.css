@@ -250,6 +250,11 @@ header {
   text-align: center;
 }
 
+#button-checkout {
+  width: 300px;
+  margin: auto;
+}
+
 @media (min-width: 425px) {
   .prod .cantidad {
     flex-direction: row;
@@ -301,8 +306,11 @@ header {
   }
   .modal-footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+  }
+  .modal-footer .totalCarrito {
+    margin: 0 60px;
   }
   .modal-footer .btn-secondary {
     order: -1;

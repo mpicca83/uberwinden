@@ -112,7 +112,7 @@ const btnVaciar = () => {
     }
 }
 
-const btnPagar = () => {
+const btnComprar = () => {
     if (carrito.length === 0){
         alertaSimple(
             'El Carrito esta vacío',
@@ -121,13 +121,8 @@ const btnPagar = () => {
             3000,
         )
     }else{
-        alertaSimple(
-            'El pago se realizó con éxito.',
-            'Muchas gracias por su compra!',
-            'success',
-            3000,
-        )
-        vaciarCarrito()
+    
+        alertaDePago()
     }
 }
 
@@ -147,6 +142,14 @@ const vaciarCarrito = () => {
     carrito =[]
     pintarCarrito(carrito)
     actualizarTotalesCarrito(carrito)
+}
+
+const eliminarCarrito = () => {
+    carrito.forEach(producto => 
+        producto.cantidad = 1
+    )
+    carrito =[]
+    guardarCarritoStorage(carrito)
 }
 
 const restarProductos = (id) => {
