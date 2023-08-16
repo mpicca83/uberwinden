@@ -3,7 +3,7 @@ const app = express();
 const cors = require("cors");
 const mercadopago = require("mercadopago");
 const path = require('path');
-const serverURL = "https://mpicca83.github.io/uberwinden/";
+const serverURL = "https://uberwinden.vercel.app/";
 
 // REPLACE WITH YOUR ACCESS TOKEN AVAILABLE IN: https://developers.mercadopago.com/panel
 mercadopago.configure({
