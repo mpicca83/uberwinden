@@ -1,4 +1,5 @@
 const pagarMP = () =>{
+    const serverURL = "https://mpicca83.github.io/uberwinden/";
 
     const mercadopago = new MercadoPago('TEST-21688d58-6ceb-475e-b96d-256d01d7ed25',{
         locale: "es-AR",
@@ -19,7 +20,8 @@ const pagarMP = () =>{
 
     
     
-    fetch("http://localhost:5500/create_preference", {
+    //fetch("http://localhost:5500/create_preference", {
+    fetch(`${serverURL}/`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

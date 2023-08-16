@@ -3,6 +3,7 @@ const app = express();
 const cors = require("cors");
 const mercadopago = require("mercadopago");
 const path = require('path');
+const serverURL = "https://mpicca83.github.io/uberwinden/";
 
 // REPLACE WITH YOUR ACCESS TOKEN AVAILABLE IN: https://developers.mercadopago.com/panel
 mercadopago.configure({
@@ -33,8 +34,10 @@ app.post("/create_preference", (req, res) => {
 			}
 		],
 		back_urls: {
-			"success": "http://localhost:5500",
-			"failure": "http://localhost:5500",
+			//"success": "http://localhost:5500",
+			//"failure": "http://localhost:5500",
+			"success": `${serverURL}/`,
+			"failure": `${serverURL}/`,
 			"pending": ""
 		},
 		auto_return: "approved",
