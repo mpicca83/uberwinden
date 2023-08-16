@@ -1,5 +1,5 @@
 const pagarMP = () =>{
-    const serverURL = "https://mpicca83.github.io/uberwinden/";
+    const serverURL = "https://mpicca83.github.io/uberwinden/create_preference";
 
     const mercadopago = new MercadoPago('TEST-21688d58-6ceb-475e-b96d-256d01d7ed25',{
         locale: "es-AR",
