@@ -2,13 +2,18 @@
   "name": "web-uberwinden",
   "version": "1.0.0",
   "description": "Proyecto de práctica",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start": "nodemon ./server/server.js",
     "build-sass": "sass ./sass/main.scss ./css/main.css -w --no-source-map"
   },
   "author": "Mauricio Picca",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mercadopago": "^1.5.17",
+    "nodemon": "^3.0.1",
     "sass": "^1.62.1"
   }
 }
