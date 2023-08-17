@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Conoce nuestra historia y pasión por el deporte. En Überwinden, nos dedicamos a ofrecerte lo mejor en ropa deportiva de calidad. ¡Únete a nuestra comunidad hoy!">
-    <meta name="keywords" content="überwinden, ropa deportiva, ropa fitness, ropa para entrenamiento, ropa deportiva online, ropa deportiva para hombres, ropa deportiva para mujeres, ropa deportiva de calidad, ropa deportiva de marca, ropa deportiva cómoda, vóley, fútbol">
-    <title>Sobre nosotros | Überwinden ropa deportiva</title>
+    <title>Plataforma de Pago | Überwinden ropa deportiva</title>
     <link rel="shortcut icon" href="../assets/images/logoU.png" type="image/x-icon"/>
     
      <!-- Importar Google Font -->
@@ -38,16 +36,46 @@
     <header class="header">
     </header>
 
-    <main>
-        <h2 class="tituloNosotros">NOSOTROS</h2>
-        <div class="nosotros">
-            <section class="nosotros__texto">
-                <P>Überwinden es una marca familiar de indumentaria deportiva, de origen argentino y estilo europeo fusionadas con creatividad e innovación Cada prenda ha sido diseñada originalmente y es exclusiva de la marca de Überwinden. Al ser una marca de ropa deportiva, utilizamos tejidos técnicos y cómodos que permitan libertad de movimientos y adecuada transpiración pero sin renunciar al diseño, color elegancia y personalidad de las prendas Todas las fases de la producción, desde la elección de los tejidos, el diseño y la confección de las prendas, la fabricación y los procesos de personalización se hacen en Argentina bajo nuestro control. Trabajamos con materiales de primera calidad y con proveedores de confianza con responsabilidad social corporativa y vocación de cuidado del medio ambiente Nuestra linea de ropa deportiva Überwinden es apta para competición aunque por su diseño, comodidad y color no nos resistimos a utilizarlos tambien en el entrenamiento habitual o como prendas de vestir sport.</P>
-            </section>
-            <section class="nosotros__imagen">
-                <img src="../assets/images/fotoNosotros.png" alt="Logo Uberwinden con lobo de fondo "/>
-            </section>
-        </div>
+    <main class="pagos">
+<!-- 
+        <form id="plataformaDePago" action="" class="plataformaDePago">
+            <h2 class="">Plataforma de Pagos</h2>
+            <div class="plataformaDePago__seccion" >
+                <div class="plataformaDePago__seccion-box">
+                    <input type="number" name="numeroTarjeta" required>
+                    <label>Número de Tarjeta</label>
+                </div>
+                <div class="plataformaDePago__seccion-box">
+                    <input type="text" name="fechaVencimiento" required>
+                    <label>Fecha de Vencimiento</label>
+                </div>
+                <div class="plataformaDePago__seccion-box">
+                    <input type="number" name="ccv" required>
+                    <label>CVV</label>
+                </div>
+                <div class="plataformaDePago__seccion-box">
+                    <input type="text" required>
+                    <label>Nombre del Titular de la Tarjeta</label>
+                </div>
+                <div class="plataformaDePago__seccion-box">
+                    <input type="number" required>
+                    <label>DNI</label>
+                </div>
+                <div class="plataformaDePago__seccion-select">
+                    <span class="spanCuotas">Opciones de Cuotas:</span>
+                    <select class="selectCuotas" id="cuotas">
+                        <option value=""></option>
+                        <option value="1">1 Cuota de $${}</option>
+                        <option value="3">3 Cuotas de $${}</option>
+                        <option value="6">6 Cuotas de $${}</option>
+                        <option value="12">12 Cuotas de $${}</option>
+                    </select>
+                </div>
+            </div>
+            <button class="realizarPago" type="submit">Realizar Pago</button>
+
+        </form> -->
+
     </main>
 
     <div class="contenedor__modal" >
@@ -58,11 +86,12 @@
 
     <script src="../js/generales/header.js"></script>
     <script src="../js/listas/lista_productos.js"></script>
+    
     <script src="../js/generales/alertas.js"></script>
     <script src="../js/generales/modal.js"></script>
     <script src="../js/generales/carrito.js"></script>
     <script src="../js/generales/sesionUsuario.js"></script>
-
+    <script src="../js/paginas/pago.js"></script>
     <script src="../js/generales/footer.js"></script>
 
 </body>

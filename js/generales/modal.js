@@ -28,7 +28,7 @@ div.innerHTML = `
                 <div class="modal-footer">
                     <p class="totalCarrito  fw-bold">Importe total: $<span id="importeTotal">0</span></p>
                     <button type="button" id="btnVaciar" class="btn btn-secondary">Vaciar</button>
-                    <button type="button" id="btnPagar" class="btn btn-primary">Pagar</button>
+                    <button type="button" id="btnComprar" class="btn btn-primary">Comprar</button>
                 </div>
             </div>
         </div>
@@ -47,8 +47,8 @@ const gestionarClick = (e) => {
         sumarProductos(e.target.value);
     } else if (e.target.id === 'btnVaciar') {
         btnVaciar()
-    } else if (e.target.id === 'btnPagar') {
-        btnPagar()
+    } else if (e.target.id === 'btnComprar') {
+        btnComprar()
     }
 
 }

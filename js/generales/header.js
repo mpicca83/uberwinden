@@ -69,7 +69,7 @@ headerContenedorInferior.innerHTML = `
                     <a class="nav-link" href="${ruta}/pages/eventos.html">Eventos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="${ruta}/pages/login.html"><i class="fa-solid fa-user"></i></a>
+                    <a id="iconUser" class="nav-link" href="${ruta}/pages/login.html"><i class="fa-solid fa-user"></i></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal" href=""><i class="fa-sharp fa-solid fa-cart-shopping"><span id="iconoCarrito"></span></i></a>

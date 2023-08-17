@@ -75,6 +75,9 @@ header {
 .encabezadoInferior .fa-sharp {
   margin-right: 15px;
 }
+.encabezadoInferior .logueado {
+  color: rgb(116, 120, 241);
+}
 .encabezadoInferior #iconoCarrito {
   position: absolute;
   font-size: 15px;
@@ -640,7 +643,7 @@ header {
   }
 }
 .login__seccion {
-  width: 320px;
+  width: 310px;
   height: 430px;
   background: #d5d0ea;
   color: #000;
@@ -664,6 +667,10 @@ header {
   border-bottom: 1px solid black;
   outline: none; /*para sacar el borde cuando es seleccionado*/
   background: transparent;
+}
+.login__seccion-box input:-webkit-autofill {
+  background-color: transparent;
+  -webkit-box-shadow: 0 0 0px 1000px #d5d0ea inset;
 }
 .login__seccion-box label {
   position: absolute;
@@ -701,14 +708,38 @@ header {
   font-family: sans-serif;
   color: rgb(0, 0, 0);
 }
+.login__deslogueo {
+  width: 300px;
+  height: 220px;
+  background: #d5d0ea;
+  color: #000;
+  padding: 30px;
+  margin: auto;
+  margin-top: 5vh;
+}
+.login__deslogueo button[type=submit] {
+  border: none;
+  background-color: #a5a5a5;
+  padding: 10px 20px;
+  cursor: pointer; /*para que el cursor se transforme a una mano cuando paso por el boton*/
+  border-radius: 5px;
+  position: relative;
+  left: 50%;
+  top: 20px;
+  transform: translate(-50%);
+}
+.login__deslogueo button[type=submit]:hover {
+  background-color: #000;
+  color: #fff;
+}
 
 .registro {
   width: 95%;
   max-width: 900px;
-  height: 400px;
+  height: 560px;
   background-color: #d5d0ea;
   margin: auto;
-  margin-top: 10vh;
+  margin-top: 5vh;
   display: grid;
   align-items: center;
   grid-template-columns: repeat(2, 1fr);
@@ -725,17 +756,21 @@ header {
   padding: 10px 0;
   margin-bottom: 30px;
   width: 100%;
-  font-size: 10px;
+  font-size: 14px;
   border: none;
   border-bottom: 1px solid black;
   outline: none; /*para sacar el borde cuando es seleccionado*/
   background-color: transparent;
 }
+.registro__seccion-box input:-webkit-autofill {
+  background-color: transparent;
+  -webkit-box-shadow: 0 0 0px 1000px #d5d0ea inset;
+}
 .registro__seccion-box label {
   position: absolute;
   left: 0;
   padding: 10px 20px;
-  font-size: 14px;
+  font-size: 12px;
   pointer-events: none; /*para que no afecte el paso del cursor*/
   transition: 0.5s;
 }
@@ -762,6 +797,12 @@ header {
 @media (min-width: 768px) {
   .registro {
     width: 85%;
+  }
+  .registro__seccion input {
+    font-size: 14px;
+  }
+  .registro__seccion label {
+    font-size: 14px;
   }
 }
 .seccion {
@@ -989,4 +1030,72 @@ h3 {
   .card {
     justify-self: center;
   }
+}
+.plataformaDePago {
+  width: 95%;
+  max-width: 400px;
+  height: 560px;
+  background-color: #d5d0ea;
+  margin: auto;
+  margin-top: 5vh;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(1, 1fr);
+}
+.plataformaDePago__seccion-box {
+  position: relative;
+  padding: 0 40px;
+}
+.plataformaDePago__seccion-box input {
+  padding: 10px 0;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 14px;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none; /*para sacar el borde cuando es seleccionado*/
+  background-color: transparent;
+}
+.plataformaDePago__seccion-box input:-webkit-autofill {
+  background-color: transparent;
+  -webkit-box-shadow: 0 0 0px 1000px #d5d0ea inset;
+}
+.plataformaDePago__seccion-box label {
+  position: absolute;
+  left: 0;
+  padding: 10px 40px;
+  font-size: 14px;
+  pointer-events: none; /*para que no afecte el paso del cursor*/
+  transition: 0.5s;
+}
+.plataformaDePago__seccion-box input:focus ~ label,
+.plataformaDePago__seccion-box input:valid ~ label { /*para que si el valor ingresado es valido los cambios permanezcan*/
+  top: -20px;
+  font-size: 12px;
+  color: #6b6b6b;
+}
+.plataformaDePago__seccion-select {
+  text-align: center;
+}
+.plataformaDePago__seccion-select .selectCuotas {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none; /*para sacar el borde cuando es seleccionado*/
+  background-color: #d5d0ea;
+}
+.plataformaDePago .realizarPago {
+  margin: auto;
+  margin-bottom: 30px;
+  width: 200px;
+  border: none;
+  background-color: #a5a5a5;
+  padding: 5px 20px;
+  cursor: pointer; /*para que el cursor se transforme a una mano cuando paso por el boton*/
+  border-radius: 5px;
+}
+.plataformaDePago .realizarPago:hover {
+  background-color: #000;
+  color: #fff;
 }
