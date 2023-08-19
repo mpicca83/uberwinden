@@ -25,6 +25,12 @@ Hasta el momento se aplicó lo siguiente:
         *EVENTOS
         *STORAGE
         *JSON
+        *OPERADORES TERNARIOS
+        *LIBRERIAS
+        *ASINCRONIA Y PROMESAS
+        *APIS
+        *ASYNC / AWAIT
+        *TRY / CATH
         
 
 

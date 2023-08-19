@@ -38,6 +38,9 @@ const validarNewUsuario = (newUsuario) =>{
         inputs.forEach((input) => {
             input.value = ''
         })
+        setTimeout(()=>{
+            window.location.href = `${ruta}/pages/login.html`
+        },5000)
         alertaSimple("Usuario registrado correctamente",`${newUsuario.nombre}, Überwinten te da la bienvenida!`, "success", 5000)
     }
 }
