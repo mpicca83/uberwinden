@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Productos | Überwinden ropa deportiva</title>
+    <title>Plataforma de Pago | Überwinden ropa deportiva</title>
     <link rel="shortcut icon" href="../assets/images/logoU.png" type="image/x-icon"/>
     
      <!-- Importar Google Font -->
@@ -29,9 +29,6 @@
     <!--Animate CDN -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css" integrity="sha512-phGxLIsvHFArdI7IyLjv14dchvbVkEDaH95efvAae/y2exeWBQCQDpNFbOTdV1p4/pIa/XtbuDCnfhDEIXhvGQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- SDK MercadoPago.js -->
-    <script src="https://sdk.mercadopago.com/js/v2"></script>
-
     <!--Estilos propios en SASS-->
     <link rel="stylesheet" href="../css/main.css"/>
 </head>
@@ -39,14 +36,7 @@
     <header class="header">
     </header>
 
-    <main class="contenedor__productos">
-
-        <h2 class="contenedor__productos-titulo">Listado de Productos</h2>
-        <p class="contenedor__productos-filtro"></p>
-
-        <div class="contenedor__productos-listado" >
-        </div>
-
+    <main class="pagos">
     </main>
 
     <div class="contenedor__modal" >
@@ -56,13 +46,11 @@
     </footer>
 
     <script src="../js/generales/header.js"></script>
-    <script src="../js/paginas/productos.js"></script>
-    <script src="../js/generales/agregarEnCarrito.js"></script>
     <script src="../js/generales/alertas.js"></script>
-    <script src="../js/generales/pagarMP.js"></script>
     <script src="../js/generales/modal.js"></script>
     <script src="../js/generales/carrito.js"></script>
     <script src="../js/generales/sesionUsuario.js"></script>
+    <script src="../js/paginas/pago.js"></script>
     <script src="../js/generales/footer.js"></script>
 
 </body>

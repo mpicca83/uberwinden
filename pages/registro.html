@@ -43,15 +43,15 @@
     </header>
 
     <main>
-        <form action="" class="registro">
+        <form id="formRegistro" action="" class="registro">
             <h2>Registrate</h2>
             <div class="registro__seccion">
                 <div class="registro__seccion-box">
-                    <input type="text" name="nombre" required=""/>
+                    <input type="text" name="nombre" required/>
                     <label>Nombre</label>
                 </div>
                 <div class="registro__seccion-box">
-                    <input type="text" name="apellido" required=""/>
+                    <input type="text" name="apellido" required/>
                     <label>Apellido</label>
                 </div>
                 <div class="registro__seccion-box">
@@ -59,29 +59,47 @@
                     <label>Alias / Club</label>
                 </div>
                 <div class="registro__seccion-box">
-                    <input type="number" name="celular" required=""/>
+                    <input type="number" name="celular" required/>
                     <label>N° de celular</label>
                 </div>
+                <div class="registro__seccion-box">
+                    <input type="text" name="direccion" required/>
+                    <label>Dirección</label>
+                </div>
+                <div class="registro__seccion-box">
+                    <input type="text" name="localidad" required/>
+                    <label>Localidad</label>
+                </div>
+
             </div>
             <div class="registro__seccion">
                 <div class="registro__seccion-box">
-                    <input type="email" name="mail" required=""/>
-                    <label>Mail</label>
-                </div>
-                <div class="registro__seccion-box">
-                    <input type="text" name="provincia" required=""/>
+                    <input type="text" name="provincia" required/>
                     <label>Provincia</label>
                 </div>
                 <div class="registro__seccion-box">
-                    <input type="text" name="usuario" required=""/>
+                    <input type="email" name="mail" required/>
+                    <label>Mail</label>
+                </div>
+                <div class="registro__seccion-box">
+                    <input type="email" name="confMail" autocomplete="off" required/>
+                    <label>Confirme Mail</label>
+                </div>
+                <div class="registro__seccion-box">
+                    <input type="text" name="usuario" autocomplete="off" required/>
                     <label>Usuario</label>
                 </div>
                 <div class="registro__seccion-box">
-                    <input type="password" name="password" required=""/>
+                    <input type="password" name="password" autocomplete="off" required/>
                     <label>Contraseña</label>
                 </div>
+                <div class="registro__seccion-box">
+                    <input type="password" name="confPassword" autocomplete="off" required/>
+                    <label>Confirme Contraseña</label>
+                </div>
+
             </div>
-            <button type="submit">Registrate</button>
+            <button id="btnRegistro" type="submit">Registrate</button>
         </form>
     </main>
 
@@ -92,10 +110,11 @@
     </footer>
 
     <script src="../js/generales/header.js"></script>
-    <script src="../js/listas/lista_productos.js"></script>
     <script src="../js/generales/alertas.js"></script>
     <script src="../js/generales/modal.js"></script>
+    <script src="../js/paginas/registro.js"></script>
     <script src="../js/generales/carrito.js"></script>
+    <script src="../js/generales/sesionUsuario.js"></script>
     <script src="../js/generales/footer.js"></script>
 
 </body>

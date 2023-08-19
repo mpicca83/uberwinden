@@ -113,6 +113,7 @@ const btnVaciar = () => {
 }
 
 const btnComprar = () => {
+    let loginUser = loginStorageObtener() 
     if (carrito.length === 0){
         alertaSimple(
             'El Carrito esta vacío',
@@ -120,9 +121,18 @@ const btnComprar = () => {
             'info',
             3000,
         )
-    }else{
-    
-        alertaDePago()
+    }else if (loginUser === 0){
+        alertaSimple(
+            'Debe iniciar Sesión',
+            'Para realizar la compra debe iniciar sesión. Redirigiendo...',
+            'error',
+            3000,
+        )
+        setTimeout(()=>{
+            window.location.href = `${ruta}/pages/login.html`
+        },3000)
+    }else {
+        window.location.href = `${ruta}/pages/pago.html`
     }
 }
 

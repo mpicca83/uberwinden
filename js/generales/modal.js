@@ -54,8 +54,6 @@ const gestionarClick = (e) => {
         btnVaciar()
     } else if (e.target.id === 'btnComprar') {
         btnComprar()
-    } else if (e.target.id === 'btnCerrar'){
-        location.reload()
     }
 }
 

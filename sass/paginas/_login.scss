@@ -1,9 +1,8 @@
 //Login
 
 .login{
-
     &__seccion{
-        width: 320px;
+        width: 310px;
         height: 430px;
         background: #d5d0ea;
         color: #000;
@@ -28,6 +27,11 @@
                 border-bottom: 1px solid black;
                 outline: none;  /*para sacar el borde cuando es seleccionado*/
                 background: transparent;
+            }
+
+            input:-webkit-autofill{
+                background-color: transparent;
+                -webkit-box-shadow: 0 0 0px 1000px #d5d0ea inset;
             }
 
             label{
@@ -72,5 +76,34 @@
             color: rgb(0, 0, 0);
         }
     }
+
+    &__deslogueo{
+        width: 300px;
+        height: 220px;
+        background: #d5d0ea;
+        color: #000;
+        padding: 30px;
+        margin: auto;
+        margin-top: 5vh;
+
+        button[type="submit"] {
+            border: none;
+            background-color: #a5a5a5;
+            padding: 10px 20px;
+            cursor: pointer;                /*para que el cursor se transforme a una mano cuando paso por el boton*/
+            border-radius: 5px;
+            position: relative;
+            left: 50%;
+            top: 20px;
+            transform: translate(-50%);
+            //margin: auto;
+        }
+          
+        button[type="submit"]:hover {
+            background-color: #000;
+            color: #fff;
+        }
+    }
+
 }
 

@@ -4,8 +4,7 @@
   "description": "Proyecto de práctica",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon ./server/server.js",
-    "build-sass": "sass ./sass/main.scss ./css/main.css -w --no-source-map"
+    "sass": "sass ./sass/main.scss ./css/main.css -w --no-source-map"
   },
   "author": "Mauricio Picca",
   "license": "ISC",
